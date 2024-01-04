@@ -1,6 +1,0 @@
-name: 'Zigbee Tuya Thermostat Otivax'
-defaultProfile: 'thermostat-tuya-x5-gc'
-packageKey: 'zigbee-tuya-thermostat-otivax'
-description: 'Zigbee Gas Boiler Thermostat'
-permissions:
-  zigbee: {}
