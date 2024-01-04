@@ -1,0 +1,48 @@
+{
+  "id": "fabricbypass11616.beep",
+  "version": 1,
+  "status": "proposed",
+  "name": "Keypad beep",
+  "ephemeral": false,
+  "attributes": {
+      "beep": {
+          "schema": {
+              "type": "object",
+              "properties": {
+                  "value": {
+                      "title": "SoundState",
+                      "type": "string",
+                      "enum": [
+                          "on",
+                          "off"
+                      ]
+                  }
+              },
+              "additionalProperties": false,
+              "required": [
+                  "value"
+              ]
+          },
+          "enumCommands": [
+              {
+                  "command": "on",
+                  "value": "on"
+              },
+              {
+                  "command": "off",
+                  "value": "off"
+              }
+          ]
+      }
+  },
+  "commands": {
+      "off": {
+          "name": "off",
+          "arguments": []
+      },
+      "on": {
+          "name": "on",
+          "arguments": []
+      }
+  }
+}

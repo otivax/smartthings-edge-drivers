@@ -1,0 +1,42 @@
+{
+    "status": "proposed",
+    "name": "Backlight level",
+    "ephemeral": false,
+    "attributes": {
+        "level": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 3,
+                        "default": 2
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value"
+                ]
+            },
+            "setter": "setLevel",
+            "enumCommands": []
+        }
+    },
+    "commands": {
+        "setLevel": {
+            "name": "setLevel",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": false,
+                    "schema": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 3
+                    }
+                }
+            ]
+        }
+    }
+}

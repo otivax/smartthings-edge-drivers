@@ -1,0 +1,50 @@
+{
+  "tag": "es",
+  "label": "Configuración diaria",
+  "attributes": {
+    "workingDaySetting": {
+      "label": "Configuración diaria",
+      "description": "Configuración diaria actual del termostato",
+      "displayTemplate": "{{attribute}} de {{device.label}}: {{value}}",
+      "i18n": {
+        "value": {
+          "mondayToFriday": {
+            "label": "<small>Lunes a viernes, sábado, domingo</small>"
+          },
+          "mondayToSaturday": {
+            "label": "<small>Lunes a sábado, domingo</small>"
+          },
+          "mondayToSunday": {
+            "label": "<small>Lunes a domingo</small>"
+          }
+        }
+      }
+    },
+    "availableWorkingDaySetting": {
+      "label": "Configuración diaria disponible",
+      "description": "Configuraciones diarias disponibles",
+      "displayTemplate": "{{attribute}} de {{device.label}}: {{value}}",
+      "i18n": {}
+    }
+  },
+  "commands": {
+    "setWorkingDaySetting": {
+      "description": "Establece la configuración diaria",
+      "arguments": {
+        "setting":{
+          "i18n": {
+            "mondayToFriday": {
+              "label": "<small>Lunes a viernes, sábado, domingo</small>"
+            },
+            "mondayToSaturday": {
+              "label": "<small>Lunes a sábado, domingo</small>"
+            },
+            "mondayToSunday": {
+              "label": "<small>Lunes a domingo</small>"
+            } 
+          }
+        }
+      }
+    }
+  }
+}

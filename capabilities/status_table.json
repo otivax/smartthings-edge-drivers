@@ -1,0 +1,24 @@
+{
+  "id": "statusTable",
+  "version": 1,
+  "status": "proposed",
+  "name": "Status table",
+  "ephemeral": false,
+  "attributes": {
+    "table":{
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "value"
+        ]
+      },
+      "enumCommands": []
+    }
+  }
+}

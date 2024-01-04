@@ -1,0 +1,123 @@
+name: thermostat-tuya-x5-gc
+components:
+- id: main
+  capabilities:
+  - id: switch
+    version: 1 
+  - id: firmwareUpdate
+    version: 1
+  - id: refresh
+    version: 1
+  - id: temperatureMeasurement
+    version: 1
+  - id: thermostatHeatingSetpoint
+    version: 1
+    config:
+      values:
+        - key: "heatingSetpoint.value"
+          range: [ 5, 35 ]
+          step: 0.5
+  - id: thermostatOperatingState
+    version: 1
+    config:
+      values:
+        - key: "thermostatOperatingState.value"
+          enabledValues:
+            - idle
+            - heating
+  - id: thermostatMode
+    version: 1
+  - id: fabricbypass11616.backlightLevel
+    version: 1
+  - id: fabricbypass11616.keypadChildLock
+    version: 1
+  - id: fabricbypass11616.keypadBeep
+    version: 1
+  - id: fabricbypass11616.thermostatWorkingDaySetting
+    version: 1
+  - id: fabricbypass11616.thermostatSchedule
+    version: 1
+  - id: fabricbypass11616.statusTable
+    version: 1
+  categories:
+  - name: Thermostat
+  metadata:
+    deviceType: Thermostat
+    ocfDeviceType: oic.d.thermostat
+    deviceTypeId: Thermostat
+    mnmn: SmartThingsCommunity
+
+preferences:
+  - name: "tempCorrection"
+    title: "Temperature correction"
+    description: "Enter temperature correction value"
+    required: false
+    preferenceType: number
+    definition:
+      minimum: -9.9
+      maximum: 9.9
+      default: 0.0
+  - name: "localTimeOffset"
+    title: "Local Time Offset"
+    description: "Select your local time offset (-12 to +12)"
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: -12
+      maximum: +12
+      default: 1
+  - name: "sensorSelection"
+    title: "Sensor Selection"
+    description: "Select internal or external sensor"
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+       0: "Internal"
+       1: "External"
+      default: 0
+  - name: "maxTemp"
+    title: "Max Temperature"
+    description: "Set the maximum temperature limit"
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 15
+      maximum: 45
+      default: 30
+  - name: "hysteresis"
+    title: "Hysteresis"
+    description: "Set hysteresis value"
+    required: false
+    preferenceType: number
+    definition:
+      minimum: 0.5
+      maximum: 5.0
+      default: 1.0
+  - name: "frostProtection"
+    title: "Frost protection"
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+       0: "Off"
+       1: "On"
+      default: 0
+  - name: "thermostatReset"
+    title: "Factory Reset"
+    description: "The thermostat wil turn on and restet. Wait"
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+       0: "Cancel"
+       1: "Reset"
+      default: 0
+  - name: "outputReverse"
+    title: "Output reverse"
+    preferenceType: enumeration
+    definition:
+      options:
+       0: "Normal"
+       1: "Reversed"
+      default: 0

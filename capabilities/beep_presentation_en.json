@@ -1,0 +1,19 @@
+{
+  "tag": "en",
+  "label": "Keypad sound",
+  "attributes": {
+    "beep": {
+      "label": "Keypad sound",
+      "i18n": {
+        "value": {
+          "on": {
+            "label": "On"
+          },
+          "off": {
+            "label": "Off"
+          }
+        }
+      }
+    }
+  }
+}
