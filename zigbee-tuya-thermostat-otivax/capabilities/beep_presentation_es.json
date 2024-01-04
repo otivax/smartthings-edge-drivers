@@ -1,0 +1,19 @@
+{
+  "tag": "es",
+  "label": "Sonido del panel",
+  "attributes": {
+    "beep": {
+      "label": "Sonido del panel",
+      "i18n": {
+        "value": {
+          "on": {
+            "label": "Activado"
+          },
+          "off": {
+            "label": "Desactivado"
+          }
+        }
+      }
+    }
+  }
+}

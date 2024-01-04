@@ -1,0 +1,114 @@
+{
+    "status": "proposed",
+    "name": "Backlight level",
+    "ephemeral": false,
+    "attributes": {
+        "bright": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "title": "BacklightBright",
+                        "type": "string",
+                        "enum": [
+                            "Off",
+                            "Low",
+                            "Medium",
+                            "High"
+                        ]
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "value"
+                ]
+            },
+            "enumCommands": [
+                {
+                    "command": "off",
+                    "value": "off"
+                },
+                {
+                    "command": "low",
+                    "value": "low"
+                },              {
+                    "command": "medium",
+                    "value": "medium"
+                },
+                {
+                    "command": "high",
+                    "value": "high"
+                }
+            ]
+        },
+        "level": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "value": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 4,
+                        "default": 3
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                      "value"
+                ],
+                "setter": "setLevel",
+                "enumCommands": []
+            }
+        }
+    },
+    "commands": {
+        "setBright": {
+            "name": "setBright",
+            "arguments": [
+                {
+                    "name": "bright",
+                    "optional": false,
+                    "schema": {
+                        "type": "string",
+                        "enum": [
+                            "off",
+                            "low",
+                            "medium",
+                            "high"
+                        ]
+                    }
+                }
+            ]
+        },
+        "setLevel": {
+            "name": "setLevel",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": false,
+                    "schema": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 4
+                    }
+                }
+            ]
+        },
+        "off": {
+            "name": "off",
+            "arguments": []
+        },
+        "low": {
+            "name": "low",
+            "arguments": []
+        },
+        "medium": {
+            "name": "medium",
+            "arguments": []
+        },
+        "high": {
+            "name": "high",
+            "arguments": []
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "tag": "es",
+  "label": "Horario",
+  "attributes": {
+    "schedule": {
+        "label": "Horario",
+        "displayTemplate": "{{attribute}} es {{value}}",
+        "i18n": {}
+    }
+},
+"commands": {}
+}

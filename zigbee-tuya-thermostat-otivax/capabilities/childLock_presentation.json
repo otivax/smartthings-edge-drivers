@@ -1,0 +1,33 @@
+{
+  "detailView": [
+    {
+      "label": "{{i18n.label}}",
+      "displayType": "toggleSwitch",
+      "toggleSwitch": {
+        "command": {
+          "on": "lock",
+          "off": "unlock"
+        },
+        "state": {
+          "value": "lock.value",
+          "valueType": "string",
+          "on": "locked",
+          "off": "unlocked",
+          "label": "{{lock.value}}",
+          "alternatives": [
+            {
+              "key": "locked",
+              "value": "{{i18n.attributes.lock.i18n.value.locked.label}}",
+              "type": "active"
+            },
+            {
+              "key": "unlocked",
+              "value": "{{i18n.attributes.lock.i18n.value.unlocked.label}}",
+              "type": "inactive"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tag": "es",
+  "label": "Bloqueo del panel",
+  "attributes": {
+    "lock": {
+      "label": "Bloqueo del panel",
+      "i18n": {
+        "value": {
+          "unlocked": {
+            "label": "Desbloqueado"
+          },
+          "locked": {
+            "label": "Bloqueado"
+          }
+        }
+      }
+    }
+  }
+}

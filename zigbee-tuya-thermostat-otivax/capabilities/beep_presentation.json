@@ -1,0 +1,33 @@
+{
+  "detailView": [
+    {
+      "label": "{{i18n.label}}",
+      "displayType": "toggleSwitch",
+      "toggleSwitch": {
+        "command": {
+            "on": "on",
+            "off": "off"
+        },
+        "state": {
+          "value": "beep.value",
+          "valueType": "string",
+          "on": "on",
+          "off": "off",
+          "label": "{{beep.value}}",
+          "alternatives": [
+            {
+              "key": "on",
+              "value": "{{i18n.attributes.beep.i18n.value.on.label}}",
+              "type": "active"
+            },
+            {
+              "key": "off",
+              "value": "{{i18n.attributes.beep.i18n.value.off.label}}",
+              "type": "inactive"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

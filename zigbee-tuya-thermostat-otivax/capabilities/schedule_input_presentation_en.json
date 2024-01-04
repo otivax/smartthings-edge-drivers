@@ -1,0 +1,12 @@
+{
+  "tag": "en",
+  "label": "Schedule",
+  "attributes": {
+    "schedule": {
+        "label": "schedule",
+        "displayTemplate": "{{attribute}} is {{value}}",
+        "i18n": {}
+    }
+},
+"commands": {}
+}
